@@ -1,0 +1,30 @@
+{
+  "id": "web/mgis-widgets",
+  "title": "mGIS Widgets",
+  "description": "How do I find you when I cannot solve this problem",
+  "source": "@site/analytics/web/mgis-widgets.md",
+  "sourceDirName": "web",
+  "slug": "/mgis-widgets",
+  "permalink": "/analytics/mgis-widgets",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "hide_title": false,
+    "hide_table_of_contents": false,
+    "sidebar_label": "mGIS Widgets",
+    "description": "How do I find you when I cannot solve this problem",
+    "keywords": [
+      "Markers",
+      "Polylines",
+      "Polygons"
+    ],
+    "image": "https://about.mappls.com/images/mappls-og.png",
+    "slug": "/mgis-widgets",
+    "title": "mGIS Widgets",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar"
+}
