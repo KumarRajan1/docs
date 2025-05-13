@@ -1,6 +1,6 @@
 [build]
-  command = "cd docusaurus/docusaurus && npm run build"  # Navigate to the correct directory
-  publish = "docusaurus/docusaurus/build"  # Specify the correct build output directory
+  command = "npm run build"  # Navigate to the correct directory
+  publish = "build"  # Specify the correct build output directory
 
 [context.production.environment]
   NODE_ENV = "production"
