@@ -1,4 +1,4 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Cache-Control = "no-cache"
+[build]
+  command = "node build-with-changes.js"  # Replace this with the path to your custom script
+  publish = "build"
+  environment = { NODE_ENV = "production" }
