@@ -1,0 +1,4 @@
+[build]
+  command = "cd docusaurus/docusaurus && npm run build"  # Navigate into the correct subdirectory before running npm build
+  publish = "docusaurus/docusaurus/build"  # Specify the correct build output directory
+  environment = { NODE_ENV = "production" }
