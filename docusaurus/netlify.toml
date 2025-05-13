@@ -1,5 +1,0 @@
-[build]
-  base = "docusaurus/docusaurus"  # Set the correct subdirectory containing your package.json
-  command = "node ../build-with-changes.js"  # Use the relative path to the script
-  publish = "docusaurus/docusaurus/build"   # Publish the build output from the correct folder
-  environment = { NODE_ENV = "production" }
