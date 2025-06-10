@@ -1,17 +1,21 @@
-name: Notify Main Docusaurus Site
+
+name: Trigger Docusaurus Sync
 
 on:
   push:
     branches:
       - main
+      - master
+  workflow_dispatch:
 
 jobs:
-  trigger-main-site:
+  trigger-sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Send dispatch event to main Docusaurus site
+      - name: Trigger Docusaurus repository sync
         run: |
           curl -X POST \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/KumarRajan1/CICDTest/dispatches \
-            -d '{"event_type": "external_update", "client_payload": { "source": "docs" }}'
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+            https://api.github.com/repos/KumarRajan1/YOUR_DOCUSAURUS_REPO_NAME/dispatches \
+            -d '{"event_type":"external-repo-updated","client_payload":{"repository":"docs1","ref":"${{ github.ref }}","sha":"${{ github.sha }}"}}'
