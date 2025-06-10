@@ -13,6 +13,5 @@ jobs:
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: token ${{ secrets.MAIN_SITE_PAT }}" \
             https://api.github.com/repos/KumarRajan1/CICDTest/dispatches \
             -d '{"event_type": "external_update", "client_payload": { "source": "docs" }}'
