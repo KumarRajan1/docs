@@ -17,5 +17,5 @@ jobs:
           curl -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
-            https://api.github.com/repos/KumarRajan1/YOUR_DOCUSAURUS_REPO_NAME/dispatches \
+            https://api.github.com/repos/KumarRajan1/CICDTest/dispatches \
             -d '{"event_type":"external-repo-updated","client_payload":{"repository":"docs1","ref":"${{ github.ref }}","sha":"${{ github.sha }}"}}'
