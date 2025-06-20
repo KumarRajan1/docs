@@ -1,0 +1,17 @@
+name: Trigger Docs Build
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  trigger-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger MkDocs Build in CICDTest Repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
+          repository: KumarRajan1/CICDTest
+          event-type: build_docs
