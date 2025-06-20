@@ -9,9 +9,9 @@ jobs:
   trigger-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger MkDocs Build in CICDTest Repo
+      - name: Trigger MkDocs Build in New_MkDocs Repo
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.REPO_DISPATCH_TOKEN }}
-          repository: KumarRajan1/CICDTest
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          repository: KumarRajan1/New_MkDocs
           event-type: build_docs
