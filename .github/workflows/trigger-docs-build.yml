@@ -3,15 +3,16 @@ name: Trigger Docs Build
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Or whichever branch you want to watch
 
 jobs:
   trigger-docs:
     runs-on: ubuntu-latest
+
     steps:
       - name: Trigger MkDocs Build in New_MkDocs Repo
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}  # PAT with `repo` access
           repository: KumarRajan1/New_MkDocs
           event-type: build_docs
